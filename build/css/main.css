@@ -35,53 +35,147 @@ table {
 a {
   text-decoration: none; }
 
+a {
+  text-decoration: none; }
+
 .wrapper {
   max-width: 1140px;
+  height: 100%;
   margin: 0 auto; }
 
 .social {
   display: flex;
   justify-content: space-between; }
 
+.arrow_up {
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: #362f2f;
+  color: #ffffff; }
+
 header {
-  padding: 20px 0;
-  width: 860px;
-  margin: 0 auto;
-  text-align: center; }
-  header .top_header {
+  position: relative;
+  height: 70px; }
+  header .wrapper {
     display: flex;
-    justify-content: space-between; }
-  header .social {
-    margin-right: 20px;
-    max-width: 140px;
-    color: #362f2f;
-    font-size: 12px; }
-  header ul {
-    list-style: none; }
-  header a {
-    text-decoration: none; }
+    justify-content: space-between;
+    align-items: center; }
+  header .nav-block-header {
+    display: flex;
+    align-items: center; }
+  header .btn-block {
+    position: relative;
+    width: 50px;
+    height: 50px; }
+  header .main-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #362f2f; }
+  header .btn-open {
+    z-index: 100;
+    background-color: #362f2f;
+    color: white; }
+  header .btn-closed {
+    background-color: transparent;
+    color: black; }
+  header .none {
+    display: none; }
   header .menu li a {
     display: block;
-    padding: 10px 30px; }
-  header .menu li {
-    background-color: #ddd; }
+    padding: 10px 15px; }
   header .menu-item {
     margin-right: 2px;
     position: relative; }
+  header .menu-item, header .submenu-item {
+    color: #362f2f;
+    font: 700 12px/1 "Roboto Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1.2px; }
   header .menu {
     display: flex; }
   header .submenu {
     position: absolute;
-    display: none; }
+    display: none;
+    background-color: #fff; }
   header .submenu-item {
     margin-top: 1px; }
+    header .submenu-item .submenu {
+      top: 57%;
+      left: 100%; }
+  header a {
+    color: black; }
+  header img {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 46%; }
+  header .social {
+    max-width: 170px;
+    color: #362f2f;
+    font-size: 12px; }
+    header .social li {
+      margin-right: 15px; }
 
-#gallery .photos img {
-  width: 100%;
-  display: none; }
+#gallery {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: center; }
+  #gallery img {
+    height: 100%;
+    max-height: 1140px; }
+  #gallery .photos img {
+    width: 100%;
+    display: none; }
+  #gallery .photos img:first-child {
+    display: block; }
+  #gallery .popup {
+    position: absolute;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    width: 263px;
+    height: 263px;
+    background: #ffffff;
+    color: #362f2f;
+    font: 400 18px/1 "Roboto Condensed"; }
+  #gallery .popup_content {
+    width: 160px;
+    height: 100px;
+    display: flex;
+    margin-bottom: 60px; }
+  #gallery .popup_title {
+    text-transform: uppercase; }
+  #gallery .popup_subtitle {
+    font-style: italic; }
+  #gallery .popup_text {
+    font: 300 14px/1 "Roboto Condensed"; }
+  #gallery .popup_icon {
+    display: flex;
+    justify-content: space-between;
+    color: #c29f00;
+    font-size: 14px; }
+  #gallery .popup_right {
+    width: 70px; }
 
-#gallery .photos img:first-child {
-  display: block; }
+.portfolio_box {
+  padding-bottom: 100px; }
+  .portfolio_box .portfolio {
+    padding-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap; }
+    .portfolio_box .portfolio .portfolio_title {
+      padding: 160px 200px 200px 20px;
+      width: 380px;
+      height: 380px;
+      color: #362f2f;
+      font: 400 24px/14px "Roboto Condensed";
+      text-transform: uppercase;
+      letter-spacing: 2.4px; }
+      .portfolio_box .portfolio .portfolio_title .portfolio_title_item {
+        margin-top: 10px;
+        font: 300 18px/14px "Roboto Condensed";
+        letter-spacing: 1.8px; }
 
 .bottom {
   padding-top: 100px;
@@ -105,9 +199,8 @@ header {
       font-size: 16px;
       font-weight: 400; }
     .bottom .workshop .time {
-      margin-bottom: 15px;
-      font-size: 14px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 14px; }
     .bottom .workshop .brand {
       width: 67px;
       height: 67px;
@@ -125,9 +218,21 @@ header {
     font: 16px/14px 700 "Roboto Condensed";
     text-transform: uppercase;
     letter-spacing: 1.6px; }
+    .bottom .news h5 {
+      margin-bottom: 25px;
+      color: #362f2f;
+      font: 700 16px/14px "Roboto Condensed";
+      text-transform: uppercase;
+      letter-spacing: 1.6px; }
+    .bottom .news h5:after {
+      content: '';
+      width: 165px;
+      height: 1px;
+      display: block;
+      background: #c3a000; }
     .bottom .news .news_item {
       display: flex;
-      margin-bottom: 50px; }
+      margin-bottom: 40px; }
       .bottom .news .news_item .news_photo {
         margin-right: 30px; }
       .bottom .news .news_item h6 {

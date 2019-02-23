@@ -1,30 +1,48 @@
-var nav = document.getElementById('nav');
-nav.addEventListener('click', function(e) {
-    var target = e.target;
+'use strict';
 
-    var targetParent = target.closest('.menu-item');
+const menu = document.querySelector('.menu');
+menu.addEventListener('mouseover', hoverNav);
+menu.addEventListener('mouseout', close);
 
+function hoverNav(e) {
+    const target = e.target;
+    console.log(target);
+    const targetParent = target.closest('.menu-item');
+    const targetParentItem = target.closest('.submenu-item');
+    console.log(targetParentItem);
+    console.log(!!targetParent);
     if (targetParent) {
-        var subm = targetParent.getElementsByClassName('submenu')[0];
+        const subm1 = targetParent.getElementsByClassName('submenu')[0];
         close();
-        if (subm) {
-            subm.style.display = 'block';
+        if (subm1)  {
+            subm1.style.display = 'block';
+        }
+        if (targetParentItem) {
+            const subm2 = targetParentItem.querySelector('.submenu');
+            console.log(subm2);
+            if (subm2)  {
+                subm2.style.display = 'block';
+            }
         }
     }
-});
+
+}
 
 function close() {
-    var s = document.getElementsByClassName('submenu');
-    for (var i = 0; i < s.length; i++) {
+    const s = document.getElementsByClassName('submenu');
+    for (let i = 0; i < s.length; i++) {
         s[i].style.display = 'none';
     }
 }
 
-var btn_prev = document.querySelector('#gallery .buttons .prev');
-var btn_next = document.querySelector('#gallery .buttons .next ');
 
-var images = document.querySelectorAll('#gallery .photos img')
-var i = 0;
+//слайдер
+
+const btn_prev = document.querySelector('#gallery .buttons .prev');
+const btn_next = document.querySelector('#gallery .buttons .next ');
+
+const images = document.querySelectorAll('#gallery .photos img');
+let i = 0;
 
 btn_prev.onclick = function(){
     images[i].style.display = 'none';
@@ -34,7 +52,7 @@ btn_prev.onclick = function(){
         i = images.length - 1;
     }
     images[i].style.display = 'block';
-}
+};
 
 btn_next.onclick = function(){
     images[i].style.display = 'none';
@@ -44,4 +62,20 @@ btn_next.onclick = function(){
         i = 0;
     }
     images[i].style.display = 'block';
+};
+
+
+//menu
+
+const navHeader = document.querySelector('#nav');
+const btnOpen = document.querySelector('.btn-open');
+const btnClosed = document.querySelector('.btn-closed');
+
+    btnOpen.addEventListener('click', toggleClass);
+    btnClosed.addEventListener('click', toggleClass);
+
+function toggleClass() {
+    navHeader.classList.toggle('none');
+    btnOpen.classList.toggle('none');
 }
+
