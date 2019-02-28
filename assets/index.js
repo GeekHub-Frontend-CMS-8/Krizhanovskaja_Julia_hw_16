@@ -1,16 +1,27 @@
 'use strict';
 
+//menu
+
+const navHeader = document.querySelector('#nav');
+const btnOpen = document.querySelector('.btn-open');
+const btnClosed = document.querySelector('.btn-closed');
+
+btnOpen.addEventListener('click', toggleClass);
+btnClosed.addEventListener('click', toggleClass);
+
+function toggleClass() {
+    navHeader.classList.toggle('none');
+    btnOpen.classList.toggle('none');
+}
+
 const menu = document.querySelector('.menu');
 menu.addEventListener('mouseover', hoverNav);
 menu.addEventListener('mouseout', close);
 
 function hoverNav(e) {
     const target = e.target;
-    console.log(target);
     const targetParent = target.closest('.menu-item');
     const targetParentItem = target.closest('.submenu-item');
-    console.log(targetParentItem);
-    console.log(!!targetParent);
     if (targetParent) {
         const subm1 = targetParent.getElementsByClassName('submenu')[0];
         close();
@@ -19,7 +30,6 @@ function hoverNav(e) {
         }
         if (targetParentItem) {
             const subm2 = targetParentItem.querySelector('.submenu');
-            console.log(subm2);
             if (subm2)  {
                 subm2.style.display = 'block';
             }
@@ -40,42 +50,35 @@ function close() {
 
 const btn_prev = document.querySelector('#gallery .buttons .prev');
 const btn_next = document.querySelector('#gallery .buttons .next ');
-
-const images = document.querySelectorAll('#gallery .photos img');
+const images = document.querySelectorAll('#gallery .photos .item-block-img');
+const counter = document.querySelector('#gallery .btn-counter-block .counter');
+const amountImg = document.querySelector('#gallery .btn-counter-block .amount-img');
 let i = 0;
 
-btn_prev.onclick = function(){
-    images[i].style.display = 'none';
-    i--;
+    amountImg.innerHTML = images.length;
+    btn_prev.onclick = function(){
+        console.log(i);
+        images[i].classList.remove('active');
+        i--;
 
-    if(i < 0){
-        i = images.length - 1;
-    }
-    images[i].style.display = 'block';
-};
+        if(i < 0){
+            i = images.length - 1;
+        }
+        counter.innerHTML = i;
+        images[i].classList.add('active');
+    };
 
 btn_next.onclick = function(){
-    images[i].style.display = 'none';
+    images[i].classList.remove('active');
     i++;
 
     if(i >= images.length){
         i = 0;
     }
-    images[i].style.display = 'block';
+    counter.innerHTML = i;
+    images[i].classList.add('active');
 };
 
 
-//menu
 
-const navHeader = document.querySelector('#nav');
-const btnOpen = document.querySelector('.btn-open');
-const btnClosed = document.querySelector('.btn-closed');
-
-    btnOpen.addEventListener('click', toggleClass);
-    btnClosed.addEventListener('click', toggleClass);
-
-function toggleClass() {
-    navHeader.classList.toggle('none');
-    btnOpen.classList.toggle('none');
-}
 
