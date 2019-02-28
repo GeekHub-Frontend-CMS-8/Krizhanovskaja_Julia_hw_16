@@ -35,9 +35,6 @@ table {
 a {
   text-decoration: none; }
 
-body {
-  background: red; }
-
 a {
   text-decoration: none; }
 
@@ -219,21 +216,32 @@ header {
   color: #ffffff;
   text-transform: uppercase; }
   .blog .blog_item {
-    margin-right: 20px;
+    margin: 20px 20px 20px 0;
     max-width: 360px;
+    position: relative;
     width: 100%;
     height: 744px;
-    background-color: #362f2f;
-    background-color: #000000; }
+    background-color: #362f2f; }
+    .blog .blog_item:after {
+      position: absolute;
+      bottom: -20px;
+      content: '';
+      width: 330px;
+      height: 1px;
+      border: 1px dotted #a7a7a7; }
     .blog .blog_item .blog_item_elem {
       padding: 15px; }
     .blog .blog_item .blog-img {
       margin-bottom: 30px; }
     .blog .blog_item .blog-heading {
       margin-bottom: 20px;
+      height: 70px;
+      overflow: hidden;
       font: 400 26px/24px "Roboto Condensed"; }
     .blog .blog_item .blog-text {
       margin-bottom: 50px;
+      height: 80px;
+      overflow: hidden;
       font: 300 14px "Roboto Condensed"; }
     .blog .blog_item .blog-btn {
       padding: 10px 60px;
@@ -249,6 +257,8 @@ header {
       letter-spacing: 1.2px; }
     .blog .blog_item .blog_date {
       margin-right: 200px; }
+  .blog .item2, .blog .item4, .blog .item6 {
+    background-color: #000000; }
 
 .arrow_up {
   padding: 20px;
@@ -312,6 +322,44 @@ header {
       margin-left: 40px; }
     .container .share i:last-child {
       margin-left: 380px; }
+  .container .comments {
+    margin-bottom: 100px;
+    color: #333333;
+    font: 700 18px/21px "Roboto Condensed"; }
+    .container .comments h5 {
+      margin-bottom: 25px; }
+    .container .comments .comments1, .container .comments .comments2 {
+      margin-bottom: 20px; }
+    .container .comments .comments2 {
+      margin-left: 20px; }
+    .container .comments .comment-title {
+      display: flex;
+      margin-bottom: 15px; }
+      .container .comments .comment-title h6 {
+        margin-right: 30px;
+        color: #333333;
+        font: 400 16px/21px "Roboto Condensed"; }
+      .container .comments .comment-title .comment-date {
+        margin-right: 400px;
+        color: #7f8c8c;
+        font-size: 12px;
+        font-weight: 400; }
+      .container .comments .comment-title .reply {
+        color: #333333;
+        font: 400 12px/21px "Roboto Condensed";
+          font-text-transform: uppercase; }
+    .container .comments .text-comment {
+      max-width: 730px;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      color: #000000;
+      font: 400 14px/22px "Roboto Condensed"; }
+      .container .comments .text-comment .text {
+        padding: 15px 50px 20px 20px;
+        background-color: #e6e6e6; }
+      .container .comments .text-comment .text-comment2 {
+        background-color: transparent; }
   .container .comment-form {
     color: #333333;
     font: 700 20px/1 "Roboto Condensed"; }
