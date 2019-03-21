@@ -471,102 +471,115 @@ header {
       font: 700 18px/1 "Roboto Condensed";
       text-transform: uppercase; }
 
-@media screen and (max-width: 768px) {
-  .container .blog_atribute {
-    margin-bottom: 30px;
-    text-align: center; }
-    .container .blog_atribute span {
-      margin-right: 80px; }
-    .container .blog_atribute p {
-      margin-bottom: 30px;
-      color: #000000;
-      font: 400 13px/23px "Roboto Condensed"; }
-    .container .blog_atribute .bold {
-      font-weight: bold; }
-    .container .blog_atribute .italic {
-      font-style: italic; }
-    .container .blog_atribute .pellentesq {
-      text-transform: uppercase; }
-  .container .share {
-    margin-bottom: 100px; }
-    .container .share span, .container .share i {
-      margin-right: 40px; }
-    .container .share span {
-      margin-left: 40px; }
-    .container .share i:last-child {
-      margin-left: 380px; }
-  .container .comments {
-    margin-bottom: 100px;
-    color: #333333;
-    font: 700 18px/21px "Roboto Condensed"; }
-    .container .comments h5 {
-      margin-bottom: 25px; }
-    .container .comments .comments1, .container .comments .comments2 {
-      margin-bottom: 20px; }
-    .container .comments .comments2 {
-      margin-left: 20px; }
-    .container .comments .comment-title {
-      display: flex;
-      margin-bottom: 15px; }
-      .container .comments .comment-title h6 {
-        margin-right: 30px;
+@media screen and (max-width: 576px) {
+  .container {
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%; }
+    .container article {
+      margin-bottom: 50px; }
+      .container article img {
+        margin-bottom: 20px; }
+      .container article h2 {
+        margin-bottom: 25px;
         color: #333333;
-        font: 400 16px/21px "Roboto Condensed"; }
-      .container .comments .comment-title .comment-date {
-        margin-right: 400px;
-        color: #7f8c8c;
-        font-size: 12px;
-        font-weight: 400; }
-      .container .comments .comment-title .reply {
-        color: #333333;
-        font: 400 12px/21px "Roboto Condensed";
+        font: 400 30px/1 "Roboto Condensed";
         text-transform: uppercase; }
-    .container .comments .text-comment {
-      max-width: 730px;
-      width: 100%;
-      height: 70px;
-      display: flex;
-      color: #000000;
-      font: 400 14px/22px "Roboto Condensed"; }
-      .container .comments .text-comment .text {
-        padding: 15px 50px 20px 20px;
-        background-color: #e6e6e6; }
-      .container .comments .text-comment .text-comment2 {
-        background-color: transparent; }
-  .container .comment-form {
-    color: #333333;
-    font: 700 20px/1 "Roboto Condensed"; }
-    .container .comment-form .form-box, .container .comment-form .form__item, .container .comment-form textarea {
-      color: #aaaaaa;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 20.8px; }
-    .container .comment-form .form-elem {
-      padding: 0;
-      margin-bottom: 30px;
-      display: flex;
-      flex-wrap: wrap; }
-    .container .comment-form .form__item, .container .comment-form textarea {
-      margin-top: 20px;
-      margin-right: 15px;
-      padding: 25px 0 25px 25px;
-      background-color: transparent;
-      width: 350px;
-      height: 56px;
-      border: 2px solid #464646; }
-    .container .comment-form textarea {
-      width: 480px;
-      height: 185px;
-      resize: none; }
-    .container .comment-form .form-btn {
-      margin-top: 165px;
-      width: 170px;
-      height: 35px;
-      background-color: #333333;
-      color: #ffffff;
-      cursor: pointer;
-      font: 700 18px/1 "Roboto Condensed";
-      text-transform: uppercase; } }
+      .container article .blog_atribute {
+        margin-bottom: 30px;
+        text-align: center; }
+        .container article .blog_atribute span {
+          margin-right: 80px; }
+      .container article p {
+        margin-bottom: 30px;
+        color: #000000;
+        font: 400 13px/23px "Roboto Condensed"; }
+      .container article .bold {
+        font-weight: bold; }
+      .container article .italic {
+        font-style: italic; }
+      .container article .pellentesq {
+        text-transform: uppercase; }
+    .container .share {
+      margin-bottom: 100px; }
+      .container .share span, .container .share i {
+        margin-right: 40px; }
+      .container .share span {
+        margin-left: 40px; }
+      .container .share i:last-child {
+        margin-left: 380px; }
+    .container .comments {
+      margin-bottom: 100px;
+      color: #333333;
+      font: 700 18px/21px "Roboto Condensed"; }
+      .container .comments h5 {
+        margin-bottom: 25px; }
+      .container .comments .comments1, .container .comments .comments2 {
+        margin-bottom: 20px; }
+      .container .comments .comments2 {
+        margin-left: 20px; }
+      .container .comments .comment-title {
+        display: flex;
+        margin-bottom: 15px; }
+        .container .comments .comment-title h6 {
+          margin-right: 30px;
+          color: #333333;
+          font: 400 16px/21px "Roboto Condensed"; }
+        .container .comments .comment-title .comment-date {
+          margin-right: 400px;
+          color: #7f8c8c;
+          font-size: 12px;
+          font-weight: 400; }
+        .container .comments .comment-title .reply {
+          color: #333333;
+          font: 400 12px/21px "Roboto Condensed";
+          text-transform: uppercase; }
+      .container .comments .text-comment {
+        max-width: 730px;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        color: #000000;
+        font: 400 14px/22px "Roboto Condensed"; }
+        .container .comments .text-comment .text {
+          padding: 15px 50px 20px 20px;
+          background-color: #e6e6e6; }
+        .container .comments .text-comment .text-comment2 {
+          background-color: transparent; }
+    .container .comment-form {
+      color: #333333;
+      font: 700 20px/1 "Roboto Condensed"; }
+      .container .comment-form .form-box, .container .comment-form .form__item, .container .comment-form textarea {
+        color: #aaaaaa;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20.8px; }
+      .container .comment-form .form-elem {
+        padding: 0;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap; }
+      .container .comment-form .form__item, .container .comment-form textarea {
+        margin-top: 20px;
+        margin-right: 15px;
+        padding: 25px 0 25px 25px;
+        background-color: transparent;
+        width: 350px;
+        height: 56px;
+        border: 2px solid #464646; }
+      .container .comment-form textarea {
+        width: 480px;
+        height: 185px;
+        resize: none; }
+      .container .comment-form .form-btn {
+        margin-top: 165px;
+        width: 170px;
+        height: 35px;
+        background-color: #333333;
+        color: #ffffff;
+        cursor: pointer;
+        font: 700 18px/1 "Roboto Condensed";
+        text-transform: uppercase; } }
 
 .bottom {
   padding-top: 100px;
@@ -579,7 +592,7 @@ header {
     height: 360px;
     background-color: #1a0000;
     color: #ffffff;
-    font: 18px/14px 300 "Roboto Condensed";
+    font: 300 18px/14px "Roboto Condensed";
     text-transform: uppercase;
     text-align: center; }
     .bottom .workshop img {
@@ -710,6 +723,23 @@ footer {
   text-align: center;
   padding-bottom: 45px;
   color: #000000;
-  font: 13px/24px 400 "Open Sans"; }
+  font: 400 13px/24px "Open Sans"; }
   footer .reserve {
     margin-top: 60px; }
+
+  .blog_item_elem p{
+      margin-bottom: 40px;
+      color: #ffffff;
+      font: 300 14px "Roboto Condensed";
+      text-transform: lowercase;
+  }
+
+  .arrow_up{
+      bottom: -40px;
+      right: 52px;
+  }
+
+  .portfolio_box .arrow_up{
+      right: 80px;
+      bottom: -700px;
+  }

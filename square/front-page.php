@@ -1,102 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-          crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="wrapper">
-            <div class="nav-block-header">
-                <div class="btn-block">
-                    <button class="main-btn btn-open">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <button class="main-btn btn-closed">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <nav id="nav" class="nav none">
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="portfolio.html">portfolio</a>
-                            <ul class="submenu">
-                                <li class="submenu-item"><a href="#">fashion</a></li>
-                                <li class="submenu-item"><a href="#">editorial</a></li>
-                                <li class="submenu-item"><a href="#">street</a></li>
-                                <li class="submenu-item"><a href="#">black white</a>
-                                    <ul class="submenu">
-                                        <li class="submenu-item1"><a href="#">gallery /1</a></li>
-                                        <li class="submenu-item1"><a href="#">gallery /2</a></li>
-                                        <li class="submenu-item1"><a href="portfolio.html">gallery /3</a></li>
-                                        <li class="submenu-item1"><a href="#">gallery /4</a></li>
-                                        <li class="submenu-item1"><a href="#">gallery /5</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu-item"><a href="#">personal</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">clients</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">news</a></li>
-                        <li class="menu-item">
-                            <a href="blog.html">blog</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <a href="index.html">
-                <img src="img/logo.png" alt="main_logo">
-            </a>
-            <ul class="social">
-                <li>
-                    <a href="https://www.facebook.com/">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com/">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-vr-cardboard"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.google.com/">
-                        <i class="fab fa-google-plus-g"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.gmail.com/">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
+<?php get_header() ?>
 
-    <div id="gallery">
+<div id="gallery">
         <div class="wrapper">
             <ul class="photos">
                 <li class="item-block-img active">
@@ -136,7 +40,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img src="img/Photo.jpg">
+                    <img src="<?php bloginfo('template_url'); ?>/img/Photo.jpg">
                 </li>
                 <li  class="item-block-img">
                     <div class="popup">
@@ -175,7 +79,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img src="img/your_photo.jpg">
+                    <img src="<?php bloginfo('template_url'); ?>/img/your_photo.jpg">
                 </li>
             </ul>
             <div class="btn-counter-block">
@@ -191,7 +95,7 @@
                     <span class="counter">0</span>
                     /
                     <span class="amount-img">10</span>
-                    
+
                 </p>
             </div>
         </div>
@@ -201,7 +105,7 @@
         <div class="wrapper">
             <div class="bottom">
                 <div class="workshop">
-                    <img src="img/photo.jpg" alt="photo">
+                    <img src="<?php bloginfo('template_url'); ?>/img/photo.jpg" alt="photo">
                     <h5>
                         fashion workshop
                     </h5>
@@ -224,7 +128,7 @@
                     <ul>
                         <li class="news_item">
                             <div>
-                                <img src="img/news1.jpg" alt="news_photo" class="news_photo">
+                                <img src="<?php bloginfo('template_url'); ?>/img/news1.jpg" alt="news_photo" class="news_photo">
                             </div>
                             <div>
                                 <h6>
@@ -242,7 +146,7 @@
                         </li>
                         <li class="news_item">
                             <div>
-                                <img src="img/news2.jpg" alt="news_photo" class="news_photo">
+                                <img src="<?php bloginfo('template_url'); ?>/img/news2.jpg" alt="news_photo" class="news_photo">
                             </div>
                             <div>
                                 <h6>
@@ -260,7 +164,7 @@
                         </li>
                         <li class="news_item">
                             <div>
-                                <img src="img/news3.jpg" alt="news_photo" class="news_photo">
+                                <img src="<?php bloginfo('template_url'); ?>/img/news3.jpg" alt="news_photo" class="news_photo">
                             </div>
                             <div>
                                 <h6>
@@ -281,7 +185,7 @@
                 <div class="contact">
                     <div class="contact_item">
                         <div>
-                            <img src="img/logo2.png" alt="logo2" class="logo2">
+                            <img src="<?php bloginfo('template_url'); ?>/img/logo2.png" alt="logo2" class="logo2">
                         </div>
                         <div class="contacts">
                             <i class="fas fa-phone-square"></i>
@@ -329,35 +233,19 @@
         <div class="wrapper">
             <ul class="logos">
                 <li>
-                    <img src="img/partner1.png" alt="logo_partner">
+                    <img src="<?php bloginfo('template_url'); ?>/img/partner1.png" alt="logo_partner">
                 </li>
                 <li>
-                    <img src="img/partner2.png" alt="logo_partner">
+                    <img src="<?php bloginfo('template_url'); ?>/img/partner2.png" alt="logo_partner">
                 </li>
                 <li>
-                    <img src="img/partner3.png" alt="logo_partner">
+                    <img src="<?php bloginfo('template_url'); ?>/img/partner3.png" alt="logo_partner">
                 </li>
                 <li>
-                    <img src="img/partner4.png" alt="logo_partner">
+                    <img src="<?php bloginfo('template_url'); ?>/img/partner4.png" alt="logo_partner">
                 </li>
             </ul>
         </div>
     </div>
 
-    <footer>
-        <div class="wrapper">
-            <p>
-                Created by 2ndself.com, with <i class="fas fa-heart"></i>
-            </p>
-            <p>
-                exclusive for theuncreativelab.com
-            </p>
-            <p class="reserve">
-                &copy;2014 Square. All Rights Reserved.
-            </p>
-        </div>
-    </footer>
-
-    <script src="js/index.js"></script>
-</body>
-</html>
+<?php get_footer() ?>
